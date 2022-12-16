@@ -180,7 +180,7 @@ int main()
                     over=true;
                     break;
                 default:
-                    cout<<"Please enter the correct option ok ";      
+                    cout<<"Please enter the correct option ";      
             }
     }
     return 0 ;
