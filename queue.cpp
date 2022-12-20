@@ -34,7 +34,7 @@ class queue{
             else{
                 cout<<"Data dequeued is: "<<q[front]<<endl;
                 front++;
-                  cout<<"Front="<<front<<endl;
+                cout<<"Front="<<front<<endl;
                 cout<<"Rear="<<rear<<endl;
             }
         }
@@ -46,7 +46,7 @@ class queue{
             }
             else{
                 cout<<"Data in the queue:"<<endl;
-                for(int i=front;i<size;i++){
+                for(int i=front;i<=rear;i++){
                     cout<<q[i]<<endl;
                 }
                   cout<<"Front="<<front<<endl;
@@ -87,8 +87,8 @@ int main()
     return 0 ;
 }
 
-
 */
+
 
 
 // Head fixed and tail varying
