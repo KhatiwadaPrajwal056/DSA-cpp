@@ -24,7 +24,6 @@ class queue{
                     rear=(rear+1)%size;      //increasing rear value
                     cout<<"Enter the data:";
                     cin>>q[rear];
-
                 }
             }
         }
