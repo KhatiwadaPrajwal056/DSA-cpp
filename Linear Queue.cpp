@@ -1,5 +1,6 @@
 // both varying
 /*
+
 #include<iostream>
 #define size 3
 using namespace std;
