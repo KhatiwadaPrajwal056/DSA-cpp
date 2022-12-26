@@ -22,7 +22,7 @@ class queue{
                 }
                 else{
                     rear=(rear+1)%size;      //increasing rear value
-                    cout<<"Enter the data";
+                    cout<<"Enter the data:";
                     cin>>q[rear];
 
                 }
@@ -49,9 +49,9 @@ class queue{
             }
             else{
                 cout<<"Data in the queue is "<<endl;
-                int count=(rear+size-front)%size; 
+                int count=(rear+size-front)%size;  // To count number of data in the queue
                 for(int i=0;i<=count;i++){
-                    int find=(front+i)%size;
+                    int find=(front+i)%size;   //indexing front for each iteration
                     cout<<q[find]<<endl;
                 }
                 
