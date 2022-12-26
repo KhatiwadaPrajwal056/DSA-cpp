@@ -1,5 +1,4 @@
-// both varying
-/*
+//Head fixed and tail varying
 #include<iostream>
 #define size 3
 using namespace std;
@@ -22,14 +21,18 @@ class queue{
         }
         void dequeue()
         {
-            if(front>rear){
+            if(rear==-1){
                 cout<<"Queue is empty"<<endl;
 
 
             }
             else{
                 cout<<"THe data dequeued is "<<q[front]<<endl;
-                front++;
+                for(int i=0;i<rear;i++){
+                    q[i]=q[i+1];
+                }
+                rear--;
+                
             }
 
         }
@@ -78,10 +81,3 @@ int main()
     }
     return 0 ;
 }
-
-
-*/
-
-
-
-
