@@ -12,7 +12,7 @@ class linked{
         void insertion(){
             int toinsert;
             int x;
-            cout<<endl<<"1. At the beginning"<<endl;
+            cout<<endl<<"1. At the Beginning"<<endl;
             cout<<"2. At the Middle"<<endl;
             cout<<"3. At the End"<<endl;
             cout<<"Enter where you want to insert: ";
@@ -82,7 +82,7 @@ class linked{
             }
             else{
                 int todel;
-                cout<<endl<<"1. At the Meginning"<<endl;
+                cout<<endl<<"1. At the Beginning"<<endl;
                 cout<<"2. At the End"<<endl;
                 cout<<"3. At the Middle"<<endl;
                 cout<<"Enter where you want to Delete: ";
