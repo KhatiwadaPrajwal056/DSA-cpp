@@ -9,8 +9,7 @@ class linked{
         linked* start;   //head pointer 
         linked* ptr;
         void insertion(){
-            int toinsert;
-            int x;
+            int toinsert,x; 
             cout<<endl<<"1. At the Beginning"<<endl;
             cout<<"2. At the Middle"<<endl;
             cout<<"3. At the End"<<endl;
@@ -22,7 +21,6 @@ class linked{
                         //BEGINNING
                             cout<<"Enter data to insert at the beginning:";
                             cin>>x;
-                            //linked* newnode = new linked;
                             newnode->data=x;
                             newnode->next=start;
                             start=newnode;
@@ -31,7 +29,6 @@ class linked{
                 case 2:{
                         //MIDDLE
                             int item;
-                            //linked* newnode = new linked;
                             ptr=start;
                             cout<<"After which item? ";
                             cin>>item;
@@ -46,8 +43,7 @@ class linked{
                             break;
                         }
                 case 3:{
-                        //END
-                            //linked* newnode = new linked;
+                            //END
                             cout<<"Enter the data to insert at the end:";
                             cin>>x;
                             newnode->data=x;
