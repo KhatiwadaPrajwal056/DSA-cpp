@@ -63,7 +63,7 @@ int main()
             p.push(c);
             break;
         default:
-            p.push(p.postf[i] - 48);
+            p.push(p.postf[i]-48);
             break;
         }
         i++;
