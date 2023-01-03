@@ -8,7 +8,6 @@ class linked{
         linked* next;
         linked* start;   //head pointer 
         linked* ptr;
-        
         void insertion(){
             int toinsert,x; 
             cout<<endl<<"1. At the Beginning"<<endl;
