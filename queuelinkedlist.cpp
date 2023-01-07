@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 class queue{
     public:
         int data;
@@ -11,6 +12,8 @@ class queue{
             top=NULL;
         }
         void enqueue(){
+            // queue *newnode;
+            // newnode =(queue*)malloc(sizeof(queue));
             queue* newnode = new queue;
             if(newnode==NULL){
                 cout<<"Memory full";
