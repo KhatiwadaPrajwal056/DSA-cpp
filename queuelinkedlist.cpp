@@ -1,22 +1,17 @@
 #include<iostream>
 using namespace std;
-class node{
-    public:
-        int data;
-        node* next;
-};
 class queue{
     public:
-        node* top;
-        node* newnode;
+        int data;
+        queue* next;
+        queue* top;
+        queue* newnode;
         int item;
         queue(){
             top=NULL;
         }
         void enqueue(){
-            // node *newnode;
-            // newnode =(node*)malloc(sizeof(node));
-            node* newnode = new node;
+            queue* newnode = new queue;
             if(newnode==NULL){
                 cout<<"Memory full";
 
@@ -30,7 +25,7 @@ class queue{
                     top=newnode;
                 }
                 else{
-                    node *ptr;
+                    queue* ptr;
                     ptr=top;
                     while(ptr->next!=NULL){
                         ptr=ptr->next;
@@ -47,7 +42,7 @@ class queue{
 
         }
         void dequeue(){
-            node *temp;
+            queue* temp;
             temp=top;
             if(temp==NULL){
                 cout<<"queue is empty"<<endl;
@@ -61,7 +56,7 @@ class queue{
 
         }
         void display(){
-            node* ptr;
+            queue* ptr;
             ptr=top;
             if(ptr==NULL){
                 cout<<"queue is empty"<<endl;
