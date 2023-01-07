@@ -1,2 +1,5 @@
- // void push(float);
-        // float pop();
+class node{
+//     public:
+//         int data;
+//         stack* next;
+// };

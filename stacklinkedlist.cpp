@@ -1,22 +1,19 @@
 #include<iostream>
 using namespace std;
-class node{
-    public:
-        int data;
-        node* next;
-};
 class stack{
     public:
-        node* top;
-        node* newnode;
-        int item;
+        int data;
+        stack* next;
+        stack* top;
+        stack* newnode;
+        int item;  
         stack(){
             top=NULL;
         }
         void push(){
-            // node *newnode;
-            // newnode =(node*)malloc(sizeof(node));
-            node* newnode = new node;
+            // stack *newnode;
+            // newnode =(stack*)malloc(sizeof(stack));
+            stack* newnode = new stack;
             if(newnode==NULL){
                 cout<<"Memory full";
 
@@ -32,21 +29,21 @@ class stack{
 
         }
         void pop(){
-            node* temp;
+            stack* temp;
             temp=top;
             top=top->next;
             if(temp==NULL){
                 cout<<"Stack is empty"<<endl;
             }
             else{
-                cout<<"Item popped is:"<<temp->data;
+                cout<<"Item popped is:"<<temp->data<<endl;
                 delete temp;  // or free(temp);
             }
             
 
         }
         void display(){
-            node* ptr;
+            stack* ptr;
             ptr=top;
             cout<<endl<<"list is: "<<endl;
             while(ptr!=NULL){
