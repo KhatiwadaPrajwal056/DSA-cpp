@@ -1,3 +1,4 @@
+// Stack using linked list:
 #include<iostream>
 using namespace std;
 class stack{
