@@ -53,7 +53,7 @@ class queue{
                     int find=(front+i)%size;   //indexing front for each iteration
                     cout<<q[find]<<endl;
                 }
-                
+                // Or display can be done handling different conditions, like: 
                 // }
                 // if(rear>=front){
                 //     for(int i=front;i<=rear;i++){
