@@ -9,6 +9,9 @@ class linked{
         linked* prev;
         linked* start;   //head pointer 
         linked* ptr;
+        linked(){
+            start=NULL;
+        }
         void insertion(){
             int toinsert,x; 
             cout<<endl<<"1. At the Beginning"<<endl;
@@ -25,11 +28,13 @@ class linked{
                             newnode->data=x;
                             newnode->next=start;
                             start=newnode;
+                            newnode->prev=NULL;
                             break;
                         }
                 case 2:{
                         //MIDDLE
                             int item;
+                            linked *temp;
                             ptr=start;
                             cout<<"After which item? ";
                             cin>>item;
@@ -39,7 +44,10 @@ class linked{
                             while(ptr->data!=item){  //Traversal
                                     ptr=ptr->next;
                             }
+                            temp=ptr->next;
+                            temp->prev=newnode;
                             newnode->next=ptr->next;
+                            newnode->prev=ptr;
                             ptr->next=newnode;  
                             break;
                         }
@@ -52,7 +60,7 @@ class linked{
                             if (start==NULL){
                                 newnode->next=start;
                                 start=newnode;
-                
+                                newnode->prev=NULL;
                             }
                             else{
                                 while(ptr->next!=NULL){
@@ -60,6 +68,7 @@ class linked{
                                 }
                                 ptr->next=newnode;
                                 newnode->next=NULL;
+                                newnode->prev=ptr;
                             }
                             break;
                         }
@@ -68,13 +77,11 @@ class linked{
                         break;
             }
         }
-    
        void deletion(){
             ptr=start;
             linked* temp;
             if(start==NULL){
                 cout<<"There's no data to delete "<<endl;
-
             }
             else{
                 int todel;
@@ -89,6 +96,7 @@ class linked{
                         //start=start->next; or below one , for deleting from memory too
                         temp =start;
                         start=start->next;
+                        start->prev=NULL;
                         delete temp;
                         break;
                     }
@@ -101,29 +109,28 @@ class linked{
                         temp->next=NULL;
                         delete ptr;
                         break;
-
                     }
                     case 3:{
                         //Middle
-
                         int item;
                         cout<<"Which item to delete: ";
                         cin>>item;
                         if(ptr->data==item){  // to check whether the choosed item is in the beginning or not
                             temp =start;
                             start=start->next;
+                            start->prev=NULL;
                             delete temp;
-
                         }
                         else{
+                            linked *sec;
                             while(ptr->data!=item){
                                 temp=ptr;
                                 ptr=ptr->next;
+                                sec=ptr->next;
                             }
+                            sec->prev=temp;
                             temp->next=ptr->next;
-                            delete ptr;
-
-                                                    
+                            delete ptr;                      
                         } 
                         break;
                     }
@@ -143,14 +150,10 @@ class linked{
             }
         }
 };
-
-
-
 int main()
 {
     linked p;
     int n,x;
-    p.start=NULL; //empty list
     bool over=false;
     while(over!=true){
         cout<<"1.Insertion"<<endl;
@@ -175,8 +178,6 @@ int main()
             default:
                 cout<<"Enter a valid option "<<endl;
         }
-
-    }
-    
+    }  
     return 0 ;
 }
