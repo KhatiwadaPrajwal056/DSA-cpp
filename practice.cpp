@@ -18,10 +18,10 @@ using namespace std;
 class queue{
     public:
         int data;
-        queue* next;
-        queue* rear;
-        queue* front;
-        queue* newnode;
+        queue *next;
+        queue *rear;
+        queue *front;
+        queue *newnode;
         int item;
         queue(){
             rear=NULL;
@@ -30,7 +30,7 @@ class queue{
         void enqueue(){
             // queue *newnode;
             // newnode =(queue*)malloc(sizeof(queue));
-            queue* newnode = new queue;
+            queue *newnode = new queue;
             if(newnode==NULL){
                 cout<<"Memory full";
 
@@ -59,7 +59,6 @@ class queue{
         }
         void dequeue(){
             queue *temp;
-            
             if(rear==NULL){
                 cout<<"queue is empty"<<endl;
             }
@@ -73,7 +72,7 @@ class queue{
 
         }
         void display(){
-            queue* ptr;
+            queue *ptr;
             ptr=front;
             if(rear==NULL){
                 cout<<"queue is empty"<<endl;
