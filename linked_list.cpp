@@ -35,7 +35,7 @@ class linked{
                             cout<<"Enter the data to insert at the middle :";
                             cin>>x;
                             newnode->data=x;
-                            while(ptr->data!=item){
+                            while(ptr->data!=item){  //Traversal
                                     ptr=ptr->next;
                             }
                             newnode->next=ptr->next;
@@ -84,7 +84,7 @@ class linked{
                 cin>>todel;
                 switch(todel){
                     case 1:{
-                        //Beg
+                        //Beginning
                         //start=start->next; or below one , for deleting from memory too
                         temp =start;
                         start=start->next;
