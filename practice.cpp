@@ -53,9 +53,6 @@ class queue{
                     rear=newnode;
                 }
             }
-              
-
-
         }
         void dequeue(){
             queue *temp;
@@ -85,8 +82,6 @@ class queue{
                 }
             }
         }
-
-
 };
 int main()
 {
