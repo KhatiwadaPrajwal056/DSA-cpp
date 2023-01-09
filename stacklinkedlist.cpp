@@ -32,11 +32,11 @@ class stack{
         void pop(){
             stack* temp;
             temp=top;
-            top=top->next;
             if(temp==NULL){
                 cout<<"Stack is empty"<<endl;
             }
             else{
+                top=top->next;
                 cout<<"Item popped is:"<<temp->data<<endl;
                 delete temp;  // or free(temp);
             }
@@ -46,10 +46,15 @@ class stack{
         void display(){
             stack* ptr;
             ptr=top;
-            cout<<endl<<"list is: "<<endl;
-            while(ptr!=NULL){
-                cout<<ptr->data<<endl;
-                ptr=ptr->next;
+            if(ptr==NULL){
+                cout<<"Stack is empty"<<endl;
+            }
+            else{
+                cout<<endl<<"list is: "<<endl;
+                while(ptr!=NULL){
+                    cout<<ptr->data<<endl;
+                    ptr=ptr->next;
+                }
             }
         }
 
@@ -65,7 +70,7 @@ int main()
         cout<<"2. Pop the data "<<endl;
         cout<<"3. Display the data "<<endl;
         cout<<"4. exit"<<endl;
-        cout<<"Enter the option: "<<endl;
+        cout<<"Enter the option: ";
         cin>>x;
             switch(x){
                 case 1:
