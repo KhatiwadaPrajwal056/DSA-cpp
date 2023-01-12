@@ -6,7 +6,6 @@ class stack{
         int data;
         stack* next;
         stack* top;
-        stack* newnode;
         int item;  
         stack(){
             top=NULL;
@@ -15,18 +14,11 @@ class stack{
             // stack *newnode;
             // newnode =(stack*)malloc(sizeof(stack));
             stack* newnode = new stack;
-            if(newnode==NULL){
-                cout<<"Memory full";
-
-            }
-            else{
                 cout<<"Enter data to push :";
                 cin>>item;
                 newnode->data=item;
                 newnode->next=top;
                 top=newnode;
-            }
-
 
         }
         void pop(){
