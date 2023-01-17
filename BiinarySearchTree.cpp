@@ -56,8 +56,6 @@ public:
     }
     void preorder(node *tree)
     {
-        // node *tree;
-        // tree = abc;
         if (tree != NULL)
         {
             cout << "Data in preorder is: " << tree->info << endl;
@@ -67,9 +65,6 @@ public:
     }
     void postorder(node *tree)
     {
-
-        // node *tree;
-        // tree = abc;
         if (tree != NULL)
         {
             postorder(tree->left);
@@ -79,8 +74,6 @@ public:
     }
     void inorder(node *tree)
     {
-        // node *tree;
-        // tree = abc;
         if (tree != NULL)
         {
             inorder(tree->left);
@@ -92,7 +85,6 @@ public:
 int main()
 {
     tree p;
-    
     int x,toinsert;
     while(1){
         cout<<"1 Insertion "<<endl;
@@ -123,7 +115,6 @@ int main()
                 cout<<"Enter valid option :"<<endl;
                 break;
         }
-    
     }
     return 0;
 }
