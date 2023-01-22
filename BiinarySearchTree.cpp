@@ -58,10 +58,11 @@ public:
     {
         if (tree != NULL)
         {
-            cout << "Data in preorder is: " << tree->info << endl;
+            cout<< tree->info << endl;
             preorder(tree->left);
             preorder(tree->right);
         }
+        
     }
     void postorder(node *tree)
     {
@@ -69,7 +70,7 @@ public:
         {
             postorder(tree->left);
             postorder(tree->right);
-            cout << "Data in postorder is: " << tree->info << endl;
+            cout<< tree->info << endl;
         }
     }
     void inorder(node *tree)
@@ -77,7 +78,7 @@ public:
         if (tree != NULL)
         {
             inorder(tree->left);
-            cout << "Data in inorder is: " << tree->info << endl;
+            cout<< tree->info << endl;
             inorder(tree->right);
         }
     }
@@ -96,17 +97,20 @@ int main()
         cin>>x;
         switch(x){
             case 1:
-                cout<<"ENter the data to insert: ";
+                cout<<"Enter the data to insert: ";
                 cin>>toinsert;
                 p.insertion(p.root,toinsert);
                 break;
             case 2:
+                cout <<endl<< "Data in preorder is: "<<endl;
                 p.preorder(p.root);
                 break;
             case 3:
+                cout <<endl<< "Data in postorder is: "<<endl;
                 p.postorder(p.root);
                 break;
             case 4:
+                cout <<endl<< "Data in Inorder is: "<<endl;
                 p.inorder(p.root);
                 break;
             case 5:
