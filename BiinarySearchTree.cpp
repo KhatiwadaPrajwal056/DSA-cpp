@@ -62,7 +62,9 @@ public:
             preorder(tree->left);
             preorder(tree->right);
         }
-        
+        if(root==NULL){
+            cout<<"No data in the tree"<<endl;
+        }     
     }
     void postorder(node *tree)
     {
@@ -72,6 +74,9 @@ public:
             postorder(tree->right);
             cout<< tree->info << endl;
         }
+        if(root==NULL){
+            cout<<"No data in the tree"<<endl;
+        } 
     }
     void inorder(node *tree)
     {
@@ -81,6 +86,9 @@ public:
             cout<< tree->info << endl;
             inorder(tree->right);
         }
+        if(root==NULL){
+            cout<<"No data in the tree"<<endl;
+        } 
     }
 };
 int main()
@@ -104,7 +112,7 @@ int main()
             case 2:
                 cout <<endl<< "Data in preorder is: "<<endl;
                 p.preorder(p.root);
-                break;
+               break;
             case 3:
                 cout <<endl<< "Data in postorder is: "<<endl;
                 p.postorder(p.root);
