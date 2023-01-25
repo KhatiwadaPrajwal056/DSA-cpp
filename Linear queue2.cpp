@@ -30,7 +30,7 @@ class queue{
                 cout<<"THe data dequeued is "<<q[front]<<endl;
                 for(int i=0;i<rear;i++){
                     q[i]=q[i+1];
-                }
+                }   
                 rear--;
                 
             }

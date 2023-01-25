@@ -3,15 +3,13 @@ using namespace std;
 class node
 {
 public:
-    node *left;
-    node *right;
+    node *left,*right;
     int info;
 };
 class tree
 {
 public:
-    node *newnode;
-    node *root;
+    node *newnode,*root;
     tree()
     {
         root = NULL;

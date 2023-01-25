@@ -8,6 +8,9 @@ class linked{
         linked* next;
         linked* start;   //head pointer 
         linked* ptr;
+        linked(){
+            start=NULL;
+        }
         void insertion(){
             int toinsert,x; 
             cout<<endl<<"1. At the Beginning"<<endl;
@@ -149,7 +152,7 @@ int main()
 {
     linked p;
     int n,x;
-    p.start=NULL; //empty list
+    // p.start=NULL; //empty list
     bool over=false;
     while(over!=true){
         cout<<"1.Insertion"<<endl;
