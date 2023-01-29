@@ -6,7 +6,7 @@ class linked{
     public:
         int data;     //data in the node
         linked* next;
-        linked* start;   //head pointer 
+        linked* start;   //ptr pointer 
         linked* ptr;
         linked(){
             start=NULL;
@@ -137,8 +137,23 @@ class linked{
             }
        }
         void display(){
+            linked *temp,*curt;
+            temp=NULL;
+            curt=start;
             ptr=start;
             cout<<endl<<"list is: "<<endl;
+            // start->next=NULL;
+            while(curt!=NULL){
+                ptr->next=temp;
+                temp=ptr;
+                curt=curt->next;
+                if(ptr->next==NULL){
+                    break;
+                }
+                ptr=ptr->next;
+            }
+            ptr=temp;
+            start=ptr;
             while(ptr!=NULL){
                 cout<<ptr->data<<endl;
                 ptr=ptr->next;
@@ -163,12 +178,12 @@ int main()
         switch(x){
             case 1:{
                 p.insertion();  // can be done using passing reference and dereferencing in the the insert func
-                p.display();
+                // p.display(); 
                 break;
             }
             case 2:{
                 p.deletion();
-                p.display();
+                // p.display();
                 break;
             }
             case 3:
@@ -177,6 +192,10 @@ int main()
             default:
                 cout<<"Enter a valid option "<<endl;
         }
+
     }
+    p.display();
+
+    
     return 0 ;
 }
