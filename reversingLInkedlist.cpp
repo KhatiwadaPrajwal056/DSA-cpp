@@ -137,27 +137,27 @@ class linked{
             }
        }
         void display(){
-            linked *temp,*curt;
+            linked *temp,*curt,*tra;
             temp=NULL;
             curt=start;
             ptr=start;
             cout<<endl<<"list is: "<<endl;
-            // start->next=NULL;
+            start=NULL;
             while(curt!=NULL){
                 if(ptr->next==NULL){
                     ptr->next=temp;
+                    tra=ptr;
                     break;
                 }
                 ptr->next=temp;
                 temp=ptr;
                 curt=curt->next;
-                
-                ptr=ptr->next;
+                ptr=curt;
             }
-            start=ptr;
-            while(ptr!=NULL){
-                cout<<ptr->data<<endl;
-                ptr=ptr->next;
+
+            while(tra!=NULL){
+                cout<<tra->data<<endl;
+                tra=tra->next;
             }
         }
 };
