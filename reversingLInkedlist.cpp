@@ -144,15 +144,16 @@ class linked{
             cout<<endl<<"list is: "<<endl;
             // start->next=NULL;
             while(curt!=NULL){
+                if(ptr->next==NULL){
+                    ptr->next=temp;
+                    break;
+                }
                 ptr->next=temp;
                 temp=ptr;
                 curt=curt->next;
-                if(ptr->next==NULL){
-                    break;
-                }
+                
                 ptr=ptr->next;
             }
-            ptr=temp;
             start=ptr;
             while(ptr!=NULL){
                 cout<<ptr->data<<endl;
