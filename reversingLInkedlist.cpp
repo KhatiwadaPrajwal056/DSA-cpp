@@ -1,5 +1,6 @@
 // 4 4 bytes for both data and address
 // worst case o(n)
+
 #include<iostream>
 using namespace std;
 class linked{
