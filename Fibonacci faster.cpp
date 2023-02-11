@@ -1,7 +1,7 @@
+// This programme generates the nth term of the fibonacci in less time.
 #include<iostream>
 using namespace std;
 unsigned long long *memo;
-
 unsigned long long fibo(unsigned long long n){
     // unsigned long long *memo;
     if (n==1 || n==2 ){
