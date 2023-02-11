@@ -49,7 +49,7 @@ public:
         }
         else
         {
-            cout << "Doubly data:" << endl;
+            cout << "Doubly data " << endl;
         }
     }
     void preorder(node *tree)
