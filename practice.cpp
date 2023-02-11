@@ -11,106 +11,35 @@ int main()
 }
 */
 
-// Queue using linked list:
 #include<iostream>
 using namespace std;
+unsigned long long *memo;
 
-class queue{
-    public:
-        int data;
-        queue *next;
-        queue *rear;
-        queue *front;
-        queue *newnode;
-        int item;
-        queue(){
-            rear=NULL;
-            front=NULL;
-        }
-        void enqueue(){
-            // queue *newnode;
-            // newnode =(queue*)malloc(sizeof(queue));
-            queue *newnode = new queue;
-            if(newnode==NULL){
-                cout<<"Memory full";
+unsigned long long fibo(unsigned long long n){
+    // unsigned long long *memo;
+    if (n==1 || n==2 ){
+        return n-1;
+    }
+    if(memo[n]!= -1){
+        return memo[n];
+    }
+    else{
+        long long result=fibo(n-1)+fibo(n-2);
+        memo[n]=result;
+        return result;
+    }
+}
 
-            }
-            else{
-                if(rear==NULL){
-                    cout<<"Enter data to enqueue :";
-                    cin>>item;
-                    newnode->data=item;
-                    newnode->next=rear;
-                    rear=newnode;
-                    front=newnode;
-                }
-                else{
-                    cout<<"Enter data to enqueue :";
-                    cin>>item;
-                    newnode->data=item;
-                    newnode->next=rear->next;
-                    rear->next=newnode;
-                    rear=newnode;
-                }
-            }
-        }
-        void dequeue(){
-            queue *temp;
-            if(rear==NULL){
-                cout<<"queue is empty"<<endl;
-            }
-            else{
-                temp=front;
-                front=front->next;
-                cout<<"Item dequeued is:"<<temp->data<<endl;
-                delete temp;  // or free(temp);
-            }
-            
-
-        }
-        void display(){
-            queue *ptr;
-            ptr=front;
-            if(rear==NULL){
-                cout<<"queue is empty"<<endl;
-            }
-            else{
-                cout<<endl<<"list is: "<<endl;
-                while(ptr!=NULL){
-                    cout<<ptr->data<<endl;
-                    ptr=ptr->next;
-                }
-            }
-        }
-};
 int main()
 {
-    queue p;
-    int x;
-    bool over=false;
-    while(over!=true){
-        cout<<"1. Enqueue the data "<<endl;
-        cout<<"2. Dequeue the data "<<endl;
-        cout<<"3. Display the data "<<endl;
-        cout<<"4. exit"<<endl;
-        cout<<"Enter the option: ";
-        cin>>x;
-            switch(x){
-                case 1:
-                    p.enqueue();
-                    break;
-                case 2:
-                    p.dequeue();
-                    break;
-                case 3:
-                    p.display();
-                    break; 
-                case 4:
-                    over=true;
-                    break;
-                default:
-                    cout<<"Please enter the correct option ";      
-            }
+    long long n;
+    cout<<"ENter number of term:";
+    cin>>n;
+    memo= new unsigned long long;
+    // memo = (unsigned long long*)malloc(sizeof(unsigned long long)*n);
+    for (int i=0;i<n;i++){
+        memo[i]=-1;
     }
+    cout<<fibo(n-1)<<endl;
     return 0 ;
 }
