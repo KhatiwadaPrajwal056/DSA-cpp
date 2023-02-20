@@ -36,7 +36,7 @@ class stack{
         }
         void display(){
             if(bot==0){
-                cout<<"Stack is empty"<<endl;
+                cout<<"Stack is empty"<<endl;  // rem!= Top to bottom
             }
             else{
                 cout<<"Data in the stack is: "<<endl;

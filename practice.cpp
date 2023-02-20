@@ -10,6 +10,8 @@ int main()
     return 0 ;
 }
 */
+/*
+BST: 
 
 #include<iostream>
 using namespace std;
@@ -118,3 +120,72 @@ int main()
     }
     return 0 ;
 }
+
+#include<iostream>
+using namespace std;
+#define n 3
+class stack{
+    public:
+        int st[n],top;
+        stack(){
+            top=-1;
+        }
+        void push(){
+            if(top==n-1){
+                cout<<"stack is full"<<endl;
+            }
+            else{
+                top++;
+                cout<<"Enter the data top push: ";
+                cin>>st[top];
+            }
+        }
+        void pop(){
+            if(top==-1){
+                cout<<"stack is empty"<<endl;
+            }
+            else{
+                cout<<"The data popped is "<<st[top]<<endl;
+                top--;
+            }
+        }
+        void display(){
+            for (int i=0;i<=top;i++){
+                cout<<st[i]<<endl;
+            }
+        }
+};
+int main()
+{
+    stack p;
+    int x;
+    while(1){
+        cout<<"1. Push"<<endl;
+        cout<<"2. pop"<<endl;
+        cout<<"3. display"<<endl;
+        cout<<"3. exit"<<endl;
+        cout<<"enter the choice ";
+        cin>>x;
+        switch(x){
+            case 1:
+                p.push();
+                break;
+            case 2:
+                p.pop();
+                break;
+            case 3:
+                cout<<"data is"<<endl;
+                p.display();
+                break;
+            case 4:
+                exit(0);
+                break;
+            default:
+                cout<<"ennter chouce ajhdsda"<<endl;  
+                break;
+        }
+    }
+    return 0 ;
+}
+
+*/
