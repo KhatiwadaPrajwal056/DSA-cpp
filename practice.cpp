@@ -11,3 +11,18 @@ int main()
 }
 */
 
+#include<iostream>
+using namespace std;
+class node{
+    public:
+        node *left,*right;
+        int info;
+
+};
+class tree{
+    
+};
+int main()
+{
+    return 0 ;
+}
