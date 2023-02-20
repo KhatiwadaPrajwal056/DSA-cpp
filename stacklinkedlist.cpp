@@ -1,19 +1,22 @@
 // Stack using linked list:
 #include<iostream>
 using namespace std;
+class Node{
+    public:
+    int data;
+    Node *next;
+};
 class stack{
     public:
-        int data;
-        stack* next;
-        stack* top;
+        Node* next,*newnode,*top;
         int item;  
         stack(){
             top=NULL;
         }
-        void push(){
+        void push(){ 
             // stack *newnode;
             // newnode =(stack*)malloc(sizeof(stack));
-            stack* newnode = new stack;
+            newnode = new Node;
                 cout<<"Enter data to push :";
                 cin>>item;
                 newnode->data=item;
@@ -22,7 +25,7 @@ class stack{
 
         }
         void pop(){
-            stack* temp;
+            Node* temp;
             temp=top;
             if(temp==NULL){
                 cout<<"Stack is empty"<<endl;
@@ -36,7 +39,7 @@ class stack{
 
         }
         void display(){
-            stack* ptr;
+            Node* ptr;
             ptr=top;
             if(ptr==NULL){
                 cout<<"Stack is empty"<<endl;
