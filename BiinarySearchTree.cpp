@@ -17,7 +17,7 @@ public:
     void insertion(node *tree, int data)
     {
         newnode = new node;
-        newnode->info = data;
+        newnode->info=data;                                                                                                                     
         newnode->left = NULL;
         newnode->right = NULL;
         if (tree == NULL)
