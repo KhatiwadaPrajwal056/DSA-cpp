@@ -5,7 +5,6 @@ using namespace std;
 class stack{
     //private:
         int top,s[size];
-    
     public:
         stack(){
             top=-1;
